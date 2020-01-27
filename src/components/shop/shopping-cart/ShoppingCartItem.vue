@@ -1,7 +1,7 @@
 <template>
   <div class="media mb-3">
     <div class="mr-2">
-      <div class="rounded vue-logo"></div>
+      <img class="cart-image" :src="item.image" :alt="item.name">
     </div>
 
     <div class="media-body">
@@ -28,10 +28,8 @@ export default {
 </script>
 
 <style scoped>
-  .vue-logo {
+  .cart-image {
     height: 50px;
-    width: 50px;
-    background: url('./../../../assets/logo.png') no-repeat center center #ddd;
-    background-size: 45%;
+    width: auto;
   }
 </style>

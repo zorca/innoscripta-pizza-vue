@@ -1,7 +1,7 @@
 <template>
   <div class="card height-full">
     <div class="card-img-top">
-      <img class="img-fluid" src="https://pizza-api.zorca.org/default-images/default.jpg" alt="Pizza image">
+      <img class="img-fluid" :src="product.image" alt="Pizza image">
     </div>
     <div class="card-body">
       <div class="height-min-140">
