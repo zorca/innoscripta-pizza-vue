@@ -14,7 +14,9 @@ task('deploy', [
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',
-    'artisan:storage:link',
+    'deploy:release',
+    'deploy:update_code',
+    'build',
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
@@ -29,7 +31,7 @@ task('test', function () {
 });
 
 task('build', function () {
-    run('cd {{release_path}} && build');
+    run('cd {{release_path}} && npm install && npm run build');
 });
 
 // [Optional] if deploy fails automatically unlock.

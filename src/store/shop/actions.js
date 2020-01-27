@@ -1,4 +1,4 @@
-import api from './../../api/fixtures'
+import api from './fixtures'
 
 export const getProfile = ({ commit }) => {
   api.getProfile(profile => {

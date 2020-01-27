@@ -6,7 +6,9 @@ const profile = {
   'limit': 850.00
 }
 
-let products = axios.get('https://pizza-api.zorca.org/api/products')
+let products = [];
+
+axios.get('https://pizza-api.zorca.org/api/products')
   .then(response => {
     products = response.data;
   })
