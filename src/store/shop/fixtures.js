@@ -12,16 +12,6 @@ const profile = {
 
 let products = [];
 
-axios.get('products')
-  .then(response => {
-    products = response.data;
-  })
-  .catch(error => {
-    console.log(error);
-    this.errored = true;
-  })
-  .finally();
-
 const shipping = 10.00;
 
 const promotions = [
@@ -39,7 +29,16 @@ export default {
   },
 
   getProducts (cb) {
-    setTimeout(() => cb(products), 300)
+    axios.get('products')
+      .then(response => {
+        products = response.data;
+        cb(products);
+      })
+      .catch(error => {
+        console.log(error);
+        this.errored = true;
+      })
+      .finally();
   },
 
   getShipping (cb) {
