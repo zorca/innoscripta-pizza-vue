@@ -1,7 +1,7 @@
 pizza-vue.zorca.org:
   domain_local: innoscripta-pizza-vue.test
   domain_remote: pizza-vue.zorca.org
-  repository: git@gitlab.com:zorca/innoscripta-pizza-vue.git
+  repository: git@github.com:zorca/innoscripta-pizza-vue.git
   deploy_path: ~/webapps/pizza-vue
   hostname: 94.176.237.153
   user: zorca
