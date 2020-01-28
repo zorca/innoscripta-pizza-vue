@@ -26,9 +26,9 @@ const shipping = 10.00;
 
 const promotions = [
   { 'id': 1, 'title': '30% OFF' },
-  { 'id': 2, 'title': '$100.00 Discount' },
+  { 'id': 2, 'title': '100.00 € Discount' },
   { 'id': 3, 'title': 'Free Shipping' },
-  { 'id': 4, 'title': '+ $100.00 on limit' }
+  { 'id': 4, 'title': '+ 100.00 € on limit' }
 ]
 
 // Simulate requests

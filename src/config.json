@@ -1,3 +1,3 @@
 {
-  "API_BASE_URL": "http://innoscripta-pizza-api.test/api"
+  "API_BASE_URL": "http://localhost:8000"
 }

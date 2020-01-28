@@ -13,10 +13,10 @@
 
     <li class="list-group-item">
       <strong>Total:</strong>
-      <strong v-if="!totalDiscount"> {{total | currencyEur}}</strong>
+      <strong v-if="!totalDiscount"> {{total | currencyEur}} ({{total/rate | currencyUsd}})</strong>
       <span v-if="totalDiscount">
-        <strike> {{total + 100 | currencyEur}}</strike>
-        <strong> {{totalWithDiscount | currencyEur}}</strong>
+        <strike> {{total + 100 | currencyEur}} ({{total/rate | currencyUsd}})</strike>
+        <strong> {{totalWithDiscount | currencyEur}} ({{totalWithDiscount/rate | currencyUsd}})</strong>
       </span>
     </li>
   </ul>
@@ -24,9 +24,25 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+import axios from 'axios'
+
+import config from '../../../config.json'
+
+axios.defaults.baseURL = config.API_BASE_URL
 
 export default {
   name: 'ShoppingCartSummary',
+  data() {
+    return {
+      rate: null
+    };
+  },
+  mounted() {
+    axios.get('rate')
+      .then(response => {
+        this.rate = response.data
+      })
+  },
   computed: {
     ...mapGetters([
       'itemsQuantity',

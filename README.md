@@ -1,24 +1,12 @@
-# innoscripta-pizza-vue
+# Innoscripta Pizza Vue App
 
 ## Project setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and serve
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Change ``src/config.json``, if you have another ``API_BASE_URL``. 
