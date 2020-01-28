@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+import config from '../../config.json'
+
+axios.defaults.baseURL = config.API_BASE_URL
+
 const profile = {
   'firstName': 'Joe',
   'lastName': 'Montana',
@@ -8,7 +12,7 @@ const profile = {
 
 let products = [];
 
-axios.get('https://pizza-api.zorca.org/api/products')
+axios.get('products')
   .then(response => {
     products = response.data;
   })
